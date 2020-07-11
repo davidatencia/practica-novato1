@@ -6,12 +6,24 @@ $Desaturated_Dark_Blue: hsl(214, 17%, 51%); //Azul oscuro desaturado
 $Grayish_Blue: hsl(212, 23%, 69%); //Azul grisáceo
 $Light_Grayish_Blue: hsl(210, 46%, 95%); //Azul grisáceo claro
 
+.texto-titulo{
+    font-size: 20px;
+    font-family: Manrope;
+    color: $Very_Dark_Grayish_Blue;
+}
+
 .texto-cuerpo{
     font-size: $tamaño-texto;
     font-family: Manrope;
+    color: $Desaturated_Dark_Blue;
+}
+.texto-shared{
+    font-family: Manrope;
+    color: $Desaturated_Dark_Blue;
 }
 body{
     background-color: $Light_Grayish_Blue;
+
     #content{
         height:-webkit-fill-available;
         display: flex;
@@ -23,18 +35,41 @@ body{
             height: 280px;
             background-color: white;  
             display: flex;
-            // justify-content: center;
             align-items: center;
             
             img{
                 height: 100%;
-                width: auto;
+                width: 35%;
                 border-radius: 7px 0px 0px 7px;
             }
             #contenido{
                 width: 100%;
                 height: auto;
                 padding: 20px;
+
+                #contacto{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+
+                    img{
+                        border-radius: 100%;
+                        margin: auto 5px auto 0;
+                        width: 50px;
+                        height: 50px;
+                    }
+                    #compartir{
+                        border-radius: 100%;
+                        width: 40px;
+                        height: 40px;
+                        border: none;
+                        margin: auto 0 auto auto;
+                        background-color: $Very_Dark_Grayish_Blue;
+                        background-image: url("../images/icon-share.svg");
+                        background-repeat: no-repeat;
+                        background-position: 13px 13px;
+                    }
+                }
             }
             &:hover{
                 box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
@@ -42,4 +77,21 @@ body{
              }
         }
     }
+
+    #shared{
+        color: white;
+        background-color: $Very_Dark_Grayish_Blue;
+        border-radius: 7px;
+        padding: 10px;
+        width: 200px;
+        height: 30px;
+        display:none;
+        align-items: center;
+        justify-content: space-around;
+        position: fixed;
+        left: 69%;
+        bottom: 42%;
+        top: 49%;
+    }
 }
+
